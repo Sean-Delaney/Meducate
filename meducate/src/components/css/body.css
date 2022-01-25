@@ -1,0 +1,59 @@
+#maincontent{
+  margin: none;
+  min-height: fit-content;
+  width: 98.85vw;
+  background: linear-gradient(180deg, rgb(0, 12, 59), rgb(67, 22, 173));
+  background-size: 150%, 150%;
+  animation: gradient ease 15s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradient{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+#title{
+  margin-left: 10vw;
+  margin-right: 15vw;
+  color: white;
+}
+#body{
+  color: white;
+}
+
+#about{
+  margin: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: none;
+  overflow-y: scroll;
+  opacity: .4;
+  border: none;
+  animation: fadeout 0.4s backwards;
+}
+
+#about:hover{
+  animation: fadein 0.4s forwards;
+}
+
+@keyframes fadein{
+  from{opacity: .4;}
+  to{opacity: 1;}
+}
+
+@keyframes fadeout{
+  from{opacity: 1;}
+  to{opacity: .4;}
+}
