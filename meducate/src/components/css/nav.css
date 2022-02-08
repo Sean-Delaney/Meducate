@@ -60,6 +60,10 @@
   margin-bottom: 2vh;
   color: white;
   margin-left: 9.5%;
+  height: 100%;
+  background-color: RGB(0, 74, 173, 0);
+  border: none;
+  font-size: x-large;
 }
 
 .items:hover{
