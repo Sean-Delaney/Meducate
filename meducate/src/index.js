@@ -2,12 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.css';
-import Header from './components/Header';
-import Navigation from './components/Navigation'
-import MainBody from './components/MainBody'
-import Footer from './components/Footer'
-
-let x;
+import Header from './components/Header.js';
+import Navigation from './components/Navigation.js'
+import MainBody from './components/MainBody.js'
+import Footer from './components/Footer.js'
 
 function App() {
   return(
@@ -22,6 +20,5 @@ function App() {
      )
   );
 }
-
 App();
 

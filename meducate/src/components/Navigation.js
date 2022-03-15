@@ -8,13 +8,18 @@ const Navigation = () => {
     <>
     <div id="navbarwrapper">
     <img src={img} id="menuicon" alt="Logo"></img>
-    <button class = 'about items'>About</button>
-    <button class = 'contact-us items'>Contact us</button>
-    <button class = 'substance-information items'>Subtance information</button>
-    <button class = 'help-services items'>Help services</button>
+    <button className = 'items' onClick={alertme}>About</button>
+    <button className = 'items'>Contact us</button>
+    <button className = 'items'>Subtance information</button>
+    <button className = 'items'>Help services</button>
     </div>
     </>
-  )
+  );
+
+  function alertme(){
+    alert("Working now you handicap")
+  } 
 }
 
-export default Navigation
+
+export default Navigation;
