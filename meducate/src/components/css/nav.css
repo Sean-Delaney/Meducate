@@ -13,6 +13,7 @@
   animation: fadein 2s forwards;
   animation-delay: 5s;
   overflow: hidden;
+  margin-top: none;
 }
 
 @keyframes fadein{
@@ -68,4 +69,8 @@
 
 .items:hover{
   color: lightblue;
+}
+
+.items:active{
+  color: green;
 }
