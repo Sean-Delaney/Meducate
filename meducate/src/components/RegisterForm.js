@@ -24,7 +24,7 @@ const RegisterForm = () => {
             <input type='email' id='boxRegister' placeholder='Email...'/> <br />
 
             <button type='button'>Sign up</button> <br />
-            <p>Already have an account? <Link to='/login'>Click here</Link> </p>
+            <p>Already have an account? <Link to='/login'>Login here</Link> </p>
           </form>
       </div>
     </div>

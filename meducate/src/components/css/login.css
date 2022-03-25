@@ -9,13 +9,15 @@
 
 #login{
   background-color: RGB(0, 74, 173);
-  height: 80%;
+  height: fit-content;
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   padding: 2px;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
 }
 
 #enter{
