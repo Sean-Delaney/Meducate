@@ -4,16 +4,16 @@
   margin: none;
   padding: none;
   height: 7.5vh;
-  width: 6.5vw;
+  width: calc(100vw - (100vw - 100%));
   transition: width 1s;
   backdrop-filter: blur(3px);
   position: fixed;
-  border-bottom-right-radius: 25px;
-  border-top-right-radius: 25px;
   animation: fadein 2s forwards;
   animation-delay: 5s;
   overflow: hidden;
   margin-top: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 @keyframes fadein{
@@ -27,7 +27,7 @@
 
 #navbarwrapper:hover{
   height: 8vh;
-  width: 98.85vw;
+  width: 98.9vw;
   background-color: RGB(0, 74, 173);
 }
 
@@ -65,12 +65,12 @@
   background-color: RGB(0, 74, 173, 0);
   border: none;
   font-size: x-large;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 2vh;
+  text-decoration: solid;
 }
 
 .items:hover{
   color: lightblue;
-}
-
-.items:active{
-  color: green;
 }

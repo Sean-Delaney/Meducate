@@ -6,6 +6,10 @@ import About from './pages/About.js';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
+import SubstanceInfo from './pages/SubstanceInfo'
+import Services from './pages/Services'
+import Login from './pages/Login'
+import Register from './pages/Register';
 
 const App = () =>{
   //State control for the animation prop of the Image on the main homepage.
@@ -25,6 +29,10 @@ const App = () =>{
       <Route exact path='/' element={ <Home status = { animation } onAnimated = { endAnimation } /> } />
       <Route path='/about' element={ <About /> } />
       <Route path='/contact' element={ <Contact /> } />
+      <Route path='/info' element={ <SubstanceInfo /> } />
+      <Route path='/services' element={ <Services /> } />
+      <Route path='/login' element={ <Login /> } />
+      <Route path='/register' element={ <Register /> } />
   	</Routes>
       <Footer />
     </>
