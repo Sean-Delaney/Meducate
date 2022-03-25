@@ -1,5 +1,5 @@
 #navbarwrapper{
-  background-color: RGB(0, 74, 173, 1);
+  background-color: RGB(0, 74, 173);
   opacity: 0;
   margin: none;
   padding: none;
@@ -27,8 +27,6 @@
 
 #navbarwrapper:hover{
   height: 8vh;
-  width: 98.9vw;
-  background-color: RGB(0, 74, 173);
 }
 
 #menuicon{
