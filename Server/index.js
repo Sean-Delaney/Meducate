@@ -3,6 +3,11 @@ const {MongoClient} = require('mongodb');
 const app = express();
 var mongoConnection;
 
+//connectMongo().catch(console.error);
+app.listen(3001, () => {
+  console.log('Connected to database and server listening on port 3001')
+})
+
 //Function used to create a connection to the mongoDb database
 async function connectMongo(){
   //Connection URI
@@ -18,13 +23,7 @@ async function connectMongo(){
   catch(e){
     console.error(e);
   }
-  finally{
-    //await mongoConnection.close()
-    mongoConnection.close();
-  }
 }
-
-connectMongo().catch(console.error);
 
 async function listDatabases(client){
   databasesList = await client.db().admin().listDatabases();
@@ -33,3 +32,7 @@ async function listDatabases(client){
   databasesList.databases.forEach(db => console.log(` - ${db.name}`));
     
 };
+
+async function closeDbConnection(){
+  mongoConnection.close();
+}
