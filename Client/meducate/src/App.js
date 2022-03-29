@@ -17,11 +17,24 @@ const App = () =>{
   //State to hold all the users for checking against login
   const [allUsers, setUsers] = useState([]);
 
-  allUsers.map((value, key) => {
-    console.log(value.username);
-  })
-  //State control for the animation prop of the Image on the main homepage.
-  const[animation, setAnimation] = useState('logo');
+  async function work(){
+    await axios.get('http://localhost:3001/users',{
+      params:{
+        "username" : "User2"
+      }
+    }).then((res)=>{
+      console.log(res.data);
+    })
+  }
+  work();
+
+  
+
+
+  //State control for the animation prop of the Image on the main homepage and text.
+  const[logoanimation, setlogoAnimation] = useState('logo');
+  const[t1Animation, setT1Animated] = useState('first');
+  const[t2Animation, setT2Animated] = useState('second');
 
   //Main return for all pages, using react router to redirect to different pages.
   return(
@@ -29,12 +42,12 @@ const App = () =>{
     <>
     <Navigation />
     <Routes>
-      <Route exact path='/' element={ <Home status={ animation } onChange={setAnimation}/> } />
+      <Route exact path='/home' element={ <Home status={logoanimation} onChange={setlogoAnimation} text1={t1Animation} t1Change={setT1Animated} text2={t2Animation} t2Change={setT2Animated} /> } />
       <Route path='/about' element={ <About /> } />
       <Route path='/contact' element={ <Contact /> } />
       <Route path='/info' element={ <SubstanceInfo /> } />
       <Route path='/services' element={ <Services /> } />
-      <Route path='/login' element={ <Login /> } />
+      <Route path='/' element={ <Login /> } />
       <Route path='/register' element={ <Register /> } />
   	</Routes>
       <Footer />

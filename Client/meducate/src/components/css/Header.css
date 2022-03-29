@@ -60,6 +60,18 @@ html{
   animation-delay: 5s;
 }
 
+#firstAnimated{
+  color: white;
+  font-weight: bolder;
+  max-width: 50vw;
+  height: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8vh;
+  margin-bottom: 0vh;
+  padding: none;
+}
+
 #second{
   color: rgb(0, 12, 59);
   padding: none;
@@ -69,8 +81,19 @@ html{
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 6vh;
-  animation: textin 5s forwards;
-  animation-delay: 6s;
+  animation: textin 6s forwards;
+  animation-delay: 5s;
+}
+
+#secondAnimated{
+  color: white;
+  padding: none;
+  max-width: 50vw;
+  max-height: 32vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 6vh;
 }
 
 @keyframes textin{

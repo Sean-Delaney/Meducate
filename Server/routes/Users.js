@@ -5,13 +5,13 @@ var usermodel = require('../Models/userModel');
 
 //Route for GET requests
 router.get('/', (req, res) => {
-  usermodel.find({}, (err, data) => {
+  usermodel.find({  }, (err, data) => {
     if(err){
       console.log(err);
     }
-    console.log(data.values.username);
-    res.send(data);
-    res.end();
+      res.redirect('http:localhost:3000/home');
+      res.send("Data succesfully fetched");
+      res.end();
   })
 })
 
