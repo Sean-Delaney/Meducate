@@ -5,10 +5,11 @@ var usermodel = require('../Models/userModel');
 
 //Route for GET requests
 router.get('/', (req, res) => {
-  var user = usermodel.find({}, (err, data) => {
+  usermodel.find({}, (err, data) => {
     if(err){
       console.log(err);
     }
+    console.log(data.values.username);
     res.send(data);
     res.end();
   })

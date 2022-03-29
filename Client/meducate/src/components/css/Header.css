@@ -26,6 +26,15 @@ html{
   animation-iteration-count: 5;
 }
 
+#logoanimated{
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 66vh;
+  width: 66vh;
+  border-radius: 300px;
+}
+
 @keyframes rotation{
   from{
     height: 25vh;

@@ -2,11 +2,11 @@ import Header from '../components/Header.js'
 import MainBody from '../components/MainBody.js'
 
 //Home Page
-const Home = ( { animation , onAnimated}) => {
+const Home = ({status, onChange}) => {
   //HTML to be rendered
   return(
     <>
-    <Header status = { animation } onAnimated = { onAnimated }/>
+    <Header status={status} onChange = {onChange}/>
     <MainBody />
     </>
   )

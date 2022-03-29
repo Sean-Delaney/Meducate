@@ -6,6 +6,7 @@ const usrSchema = new mongoose.Schema({
   username: String,
   password: String,
   email: String,
+  loggedIn:{type: Boolean, default: false},
   videosWatched: String,
   awards: String
 });

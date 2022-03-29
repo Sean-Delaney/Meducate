@@ -3,9 +3,12 @@ const app = express();
 const mongoose = require('mongoose')
 const parser = require('body-parser');
 require('dotenv').config({path:'../.env'});
+const cors = require('cors');
 
 //User parser to parse the request body
 app.use(parser.json())
+//Use cors to allow cross origin communication
+app.use(cors());
 
 //Connect to the database and then start server
 mongoose.connect(
