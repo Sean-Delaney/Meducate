@@ -1,33 +1,11 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
+const parser = require('body-parser');
 require('dotenv').config({path:'../.env'});
 
-//Schema for users collection in the database
-const usrSchema = new mongoose.Schema({
-  username: {
-    type: String,
-    required: true
-  },
-  password: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  securityAnswer: {
-    type: String,
-    required: true
-  },
-  videosWatched: [String],
-  awards: [String]
-})
-
-//Model for database
-const User = mongoose.model('User', usrSchema);
-
+//User parser to parse the request body
+app.use(parser.json())
 
 //Connect to the database and then start server
 mongoose.connect(
@@ -36,9 +14,21 @@ mongoose.connect(
     useNewUrlParser: true,
     useUnifiedTopology: true
   }
-)
-.then(
-  app.listen(3001, () => {
-    console.log('Server now listening on port 3001');
-  })
 );
+
+//Get the connection
+const db = mongoose.connection;
+
+//Show database status
+db.once('open', ()=>{
+  console.log('Database connection successful...');
+});
+
+//Start the server
+app.listen(3001, ()=>{
+  console.log('Server now listening on port 3001');
+})
+
+//Routers
+const userRouter = require('./routes/Users.js');
+app.use('/users', userRouter);
