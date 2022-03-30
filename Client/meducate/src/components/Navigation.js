@@ -3,17 +3,17 @@ import './css/nav.css'
 import img from '../favicon.ico'
 import { Link } from 'react-router-dom';
 
-const Navigation = () => {
+const Navigation = ( { showNav, hideNav, showItems, hideItems, showLogo, hideLogo } ) => {
 
   return (
     <>
-    <div id="navbarwrapper">
-    <Link to='/home'><img src={img} id="menuicon" alt="Logo"></img></Link>
-    <Link to='/about' className='items'>About</Link>
-    <Link to='/contact' className = 'items'>Contact us</Link>
-    <Link to='/info' className = 'items'>Drug Info</Link>
-    <Link to='/services' className = 'items'>Help services</Link>
-    <Link to='/' className = 'items'>Login</Link>
+    <div id={showNav}>
+    <Link to='/'><img src={img} id={showLogo} alt="Logo"></img></Link>
+    <Link to='/about' className={showItems}>About</Link>
+    <Link to='/contact' className = {showItems}>Contact us</Link>
+    <Link to='/info' className = {showItems}>Drug Info</Link>
+    <Link to='/services' className = {showItems}>Help services</Link>
+    <Link to='/logout' className = {showItems}>Login</Link>
     </div>
     </>
   );

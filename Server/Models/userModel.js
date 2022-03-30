@@ -9,7 +9,7 @@ const usrSchema = new mongoose.Schema({
   loggedIn:{type: Boolean, default: false},
   videosWatched: String,
   awards: String
-});
+}, {timestamps: true});
 
 //Model for database to be exported
 module.exports = mongoose.model('User', usrSchema);

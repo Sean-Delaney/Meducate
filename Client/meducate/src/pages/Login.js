@@ -1,10 +1,10 @@
 import React from 'react'
 import LoginForm from '../components/LoginForm'
 
-const Login = () => {
+const Login = ( { onClick } ) => {
   return (
     <>
-      <LoginForm />
+      <LoginForm onClick={onClick} />
     </>
   )
 }

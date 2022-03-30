@@ -1,8 +1,16 @@
+import { useEffect } from 'react'
 import Header from '../components/Header.js'
 import MainBody from '../components/MainBody.js'
 
 //Home Page
-const Home = ({status, onChange, text1, t1Change, text2, t2Change}) => {
+const Home = ({status, onChange, text1, t1Change, text2, t2Change, shownav, showitems, showlogo}) => {
+
+  useEffect(()=>{
+    shownav('navbarwrapper');
+    showitems('items');
+    showlogo('menuicon');
+  },[])
+
   //HTML to be rendered
   return(
     <>

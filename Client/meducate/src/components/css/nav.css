@@ -43,6 +43,24 @@
   margin-bottom: 5vh;
 }
 
+#hiddenwrap{
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.hiddenitems{
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+#hiddenicon{
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
 @keyframes fadeinicon{
   0%{
     opacity: 0;
