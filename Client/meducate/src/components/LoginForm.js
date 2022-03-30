@@ -1,30 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './css/login.css'
+import axios from 'axios';
 
-const LoginForm = ( { func } ) => {
+const LoginForm = ( { setLogin } ) => {
   //References
   const userRef = useRef();
   const errRef = useRef();
-
-  //States
-  const[user, setUser] = useState('');
-  const[pwd, setPwd] = useState('');
-  const[err, setErr] = useState('');
-
-  //Reset error on any changes too username or password 
-  useEffect(() => {
-    setErr('');
-  }, [user, pwd]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     let usr = document.getElementById('username').value;
     let pass = document.getElementById('password').value; 
-    console.log(usr, pass);
-    setPwd('');
-    setUser('');
-    func();
+    setLogin(true);
   }
 
   return (

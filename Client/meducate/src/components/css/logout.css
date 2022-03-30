@@ -1,0 +1,22 @@
+#logoutHolder{
+  margin: none;
+  height: 90vh;
+  width: 98.85vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#check{
+  text-align: center;
+}
+
+button{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+*{
+  padding: none;
+  margin: none;
+}

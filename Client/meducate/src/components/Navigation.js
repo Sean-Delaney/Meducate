@@ -13,7 +13,7 @@ const Navigation = ( { showNav, hideNav, showItems, hideItems, showLogo, hideLog
     <Link to='/contact' className = {showItems}>Contact us</Link>
     <Link to='/info' className = {showItems}>Drug Info</Link>
     <Link to='/services' className = {showItems}>Help services</Link>
-    <Link to='/logout' className = {showItems}>Login</Link>
+    <Link to='/logout' className = {showItems}>Logout</Link>
     </div>
     </>
   );

@@ -3,6 +3,7 @@ import React from 'react'
 const AboutBody = () => {
   return (
     <div>
+      <div>
       <p>loremReprehenderit nulla aliquip et excepteur nostrud dolore non voluptate non mollit cillum. Ullamco id exercitation pariatur Lorem veniam culpa aliquip minim est laboris. Est adipisicing esse irure dolore mollit aute.
 
 Esse nulla ut qui occaecat occaecat. Aliquip consectetur labore anim ullamco fugiat quis ut. Lorem ullamco et ad quis sit velit voluptate. Ipsum sunt incididunt dolor qui irure voluptate cillum ad. Nulla ea culpa reprehenderit culpa amet. Nostrud minim cupidatat eiusmod nostrud laboris do exercitation ea et laborum nostrud.
@@ -22,6 +23,7 @@ Laborum eu ipsum quis deserunt dolor elit enim reprehenderit. Aliqua dolor labor
 Cillum qui proident elit consectetur in fugiat. Mollit anim aute officia do laborum. Enim adipisicing mollit id nulla dolore esse ullamco laborum.
 
 Ut laboris adipisicing officia reprehenderit. Proident culpa laborum irure ad aliquip. Velit veniam officia laborum ea tempor sit consectetur tempor cupidatat non reprehenderit.</p>
+</div>
     </div>
   )
 }

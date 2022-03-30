@@ -8,16 +8,11 @@ import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import SubstanceInfo from './pages/SubstanceInfo'
 import Services from './pages/Services'
-import Register from './pages/Register';
-import axios from 'axios';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
+import Logout from './pages/Logout';
 
 const App = () => {
-  
-  var isLoggedIn = false;
-  //State to hold all the users for checking against login
-  const [allUsers, setUsers] = useState([]);
   //State control for the animation prop of the Image on the main homepage and text.
   const[logoanimation, setlogoAnimation] = useState('logo');
   const[t1Animation, setT1Animated] = useState('first');
@@ -26,30 +21,19 @@ const App = () => {
   const[showNavWrap, hideNavWrap] = useState('hiddenwrap');
   const[showItems, hideItems] = useState('hiddenitems');
   const[showLogo, hideLogo] = useState('hiddenicon')
-
+  //State control to only allow login/register page to show first.
   const[success, setSuccess] = useState(false);
 
-  function logMeIn(){
-    console.log("wont work");
-    setSuccess(true);
-  }
-
-  //Function to retrieve all users from database
-  async function getUsers(query){
-    await axios.get('http://localhost:3001/users', {params: query}).then((res)=>{
-      setUsers(res.data);
-      logData(res.data);
-    })
-  }
-
-  function logData(data){
-    console.log(data);
+  //Function to be passed to Login and Logout components to allow them to set the login status.
+  function changeSuccess(status){
+    setSuccess(status);
   }
     //Main return for all pages, using react router to redirect to different pages.
     return(
       <>
         <Navigation showNav={showNavWrap} hideNav={hideNavWrap} showItems={showItems} hideItems={hideItems} showLogo={showLogo} hideLogo={hideLogo}/>
       <Routes>
+        {/* Different displays based on login status */}
           {success ? (
           <>
             <Route path='/' element={ <Home status={logoanimation} onChange={setlogoAnimation} text1={t1Animation} 
@@ -59,10 +43,11 @@ const App = () => {
             <Route path='/contact' element={ <Contact /> } />
             <Route path='/info' element={ <SubstanceInfo /> } />
             <Route path='/services' element={ <Services /> } />
+            <Route path='/logout' element={ <Logout setLogin={changeSuccess} /> } />
           </>
           ) : (
             <>
-            <Route path='/' element={ <LoginForm func={logMeIn}/> } />
+            <Route path='/' element={ <LoginForm setLogin={changeSuccess}/> } />
             <Route path='/register' element={ <RegisterForm /> } />
           </>
           )}
