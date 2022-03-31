@@ -1,5 +1,4 @@
 const express = require('express');
-const userModel = require('../Models/userModel');
 const router = express.Router();
 var usermodel = require('../Models/userModel');
 
@@ -8,8 +7,9 @@ router.get('/', (req, res) => {
   usermodel.find(req.query, (err, data) => {
     if(err){
       console.log(err);
-    }
-      console.log(req.query)
+    } 
+      //Show new sign in requests in the terminal
+      console.log("New sign-in from", req.query.username);
       res.send(data);
       res.end();
   })
@@ -18,12 +18,12 @@ router.get('/', (req, res) => {
 //Route for POST requests
 router.post('/', async (req, res) => {
   var user = req.body;
-  await usermodel.insertMany((user), (err, data) => {
+  await usermodel.insertMany((user), (err) => {
     if(err){
       console.log(err);
     }
   });
-  res.send("User " + user.username + " inserted. Thank you..")
+  res.send('success')
   res.end();
 })
 

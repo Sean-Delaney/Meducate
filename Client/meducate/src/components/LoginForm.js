@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './css/login.css'
-import axios from 'axios';
+import axios from 'axios'
+const API_URL = 'http://localhost:3001/users'
 
 const LoginForm = ( { setLogin } ) => {
   //References
@@ -12,7 +13,34 @@ const LoginForm = ( { setLogin } ) => {
     e.preventDefault();
     let usr = document.getElementById('username').value;
     let pass = document.getElementById('password').value; 
-    setLogin(true);
+    let fetchedUser;
+
+    let details = {
+      username: usr,
+      password: pass
+    }
+
+    await axios.get(API_URL, {params: details}).then((res) => {
+      if(res.data.length>0){
+        fetchedUser = res.data;
+        setLogin(true);
+      }
+      else{
+        setErrormessage();
+      }
+    }).then(()=>{
+      console.log(fetchedUser[0].username);
+    })
+
+    function setErrormessage(){
+      let space = document.getElementById('errorspace');
+
+      space.innerText = "There was an error logging you in";
+
+      setTimeout(() => {
+        space.innerText = '';
+      }, 4000);
+    }
   }
 
   return (
@@ -23,7 +51,9 @@ const LoginForm = ( { setLogin } ) => {
           <div id='titlewrapper'>
             <label id='title'>Log in to your account</label> <br />
           </div>
-            <p ref={errRef}></p>
+          <div id='errorholder'>
+            <p id='errorspace'></p>
+          </div>
 
             <label className='enter'>Username</label> <br />
             <input 

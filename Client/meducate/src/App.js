@@ -48,7 +48,7 @@ const App = () => {
           ) : (
             <>
             <Route path='/' element={ <LoginForm setLogin={changeSuccess}/> } />
-            <Route path='/register' element={ <RegisterForm /> } />
+            <Route path='/register' element={ <RegisterForm setLogin={changeSuccess}/> } />
           </>
           )}
         </Routes>
