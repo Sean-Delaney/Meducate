@@ -11,6 +11,15 @@ import Services from './pages/Services'
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
 import Logout from './pages/Logout';
+import Cocaine from './pages/Cocaine';
+import Marijuana from './pages/Marijuana';
+import Alcohol from './pages/Alcohol';
+import Tobacco from './pages/Tobacco';
+import Mdma from './pages/Mdma';
+import Ketamine from './pages/Ketamine';
+import Twocb from './pages/Twocb';
+import Lsd from './pages/Lsd';
+import Mushrooms from './pages/Mushrooms';
 
 const App = () => {
   //State control for the animation prop of the Image on the main homepage and text.
@@ -47,6 +56,15 @@ const App = () => {
             <Route path='/info' element={ <SubstanceInfo /> } />
             <Route path='/services' element={ <Services /> } />
             <Route path='/logout' element={ <Logout setLogin={changeSuccess} /> } />
+            <Route path='/cocaine' element={ <Cocaine /> } />
+            <Route path='/marijuana' element={ <Marijuana /> } />
+            <Route path='/alcohol' element={ <Alcohol /> } />
+            <Route path='/tobacco' element={ <Tobacco /> } />
+            <Route path='/mdma' element={ <Mdma /> } />
+            <Route path='/ketamine' element={ <Ketamine /> } />
+            <Route path='/2cb' element={ <Twocb /> } />
+            <Route path='/lsd' element={ <Lsd /> } />
+            <Route path='/magicmushrooms' element={ <Mushrooms /> } />
           </>
           ) : (
             <>
