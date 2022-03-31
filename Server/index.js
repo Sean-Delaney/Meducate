@@ -33,5 +33,10 @@ app.listen(3001, ()=>{
 })
 
 //Routers
-const userRouter = require('./routes/Users.js');
+//Route for getting / creating users
+const userRouter = require('./routes/Users.js'); 
 app.use('/users', userRouter);
+
+//Route for getting drugs
+const drugRouter = require('./routes/Drugs.js');
+app.use('/drugs', drugRouter);

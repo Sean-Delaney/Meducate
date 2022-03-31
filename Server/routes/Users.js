@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
       console.log(err);
     } 
       //Show new sign in requests in the terminal
-      console.log("New sign-in from", req.query.username);
+      console.log("New sign-in attempt from", req.query.username);
       res.send(data);
       res.end();
   })
@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
       console.log(err);
     }
   });
-  res.send('success')
+  res.send('success');
   res.end();
 })
 

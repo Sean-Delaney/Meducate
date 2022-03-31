@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const schema = mongoose.Schema;
 
 //Schema for users collection in the database
 const usrSchema = new mongoose.Schema({

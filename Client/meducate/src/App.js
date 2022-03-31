@@ -28,6 +28,7 @@ const App = () => {
   async function changeSuccess(status){
     localStorage.setItem('loggedIn', status);
     setSuccess(localStorage.getItem('loggedIn'));
+    window.location.href = '/'
   }
 
     //Main return for all pages, using react router to redirect to different pages.
