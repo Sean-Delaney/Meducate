@@ -1,5 +1,5 @@
 import './index.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.js';
 import About from './pages/About.js';
@@ -20,21 +20,23 @@ const App = () => {
   //State control for not showing menu on login/register page
   const[showNavWrap, hideNavWrap] = useState('hiddenwrap');
   const[showItems, hideItems] = useState('hiddenitems');
-  const[showLogo, hideLogo] = useState('hiddenicon')
-  //State control to only allow login/register page to show first.
-  const[success, setSuccess] = useState(false);
+  const[showLogo, hideLogo] = useState('hiddenicon');
+  const login = localStorage.getItem('loggedIn');
+  const[success, setSuccess] = useState(login);
 
   //Function to be passed to Login and Logout components to allow them to set the login status.
-  function changeSuccess(status){
-    setSuccess(status);
+  async function changeSuccess(status){
+    localStorage.setItem('loggedIn', status);
+    setSuccess(localStorage.getItem('loggedIn'));
   }
+
     //Main return for all pages, using react router to redirect to different pages.
     return(
       <>
         <Navigation showNav={showNavWrap} hideNav={hideNavWrap} showItems={showItems} hideItems={hideItems} showLogo={showLogo} hideLogo={hideLogo}/>
       <Routes>
         {/* Different displays based on login status */}
-          {success ? (
+          {success == 'true' ? (
           <>
             <Route path='/' element={ <Home status={logoanimation} onChange={setlogoAnimation} text1={t1Animation} 
             t1Change={setT1Animated} text2={t2Animation} t2Change={setT2Animated} 

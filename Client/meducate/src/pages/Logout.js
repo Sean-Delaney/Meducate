@@ -4,7 +4,7 @@ import '../components/css/logout.css'
 const Logout = ( { setLogin } ) => {
 
   function handleLogout(){
-    setLogin(false);
+    setLogin('false');
     window.location.href = 'http://localhost:3000/';
   }
 

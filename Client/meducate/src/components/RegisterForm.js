@@ -24,6 +24,9 @@ const RegisterForm = ( { setLogin } ) => {
         if(res.data === "success"){
           backToLogin();
         }
+        else{
+          alert("Passwords do not match");
+        }
       }) 
     }
   }
@@ -48,6 +51,7 @@ const RegisterForm = ( { setLogin } ) => {
             className='boxRegister' 
             placeholder='Username...' 
             id='username'
+            required
             /> <br />
 
             <label id='registerEnter'>Enter a password</label> <br />
@@ -56,6 +60,7 @@ const RegisterForm = ( { setLogin } ) => {
             className='boxRegister' 
             placeholder='Password...' 
             id='password1'
+            required
             /> <br />
 
             <label id='registerEnter'>Confirm your password</label> <br />
@@ -64,6 +69,7 @@ const RegisterForm = ( { setLogin } ) => {
             className='boxRegister' 
             placeholder='Re-type password...'
             id='password2'
+            required
             /> <br />
 
             <label id='registerEnter'>Enter your email</label> <br />
@@ -72,6 +78,7 @@ const RegisterForm = ( { setLogin } ) => {
             className='boxRegister' 
             placeholder='Email...' 
             id='email'
+            required
             /> <br />
 
             <button>Sign up</button> <br />

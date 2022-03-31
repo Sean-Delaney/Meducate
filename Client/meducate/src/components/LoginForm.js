@@ -21,9 +21,9 @@ const LoginForm = ( { setLogin } ) => {
     }
 
     await axios.get(API_URL, {params: details}).then((res) => {
-      if(res.data.length>0){
+      if(res.data.length == 1){
         fetchedUser = res.data;
-        setLogin(true);
+        setLogin('true');
       }
       else{
         setErrormessage();
