@@ -43,7 +43,19 @@ const Services = () => {
         </div>
       </div>
 
-    </div>
+        <div className='service'>
+          <div className='serviceheader'>
+            <h1>HSE</h1>
+          </div>
+          <div className='servicedescription'>
+            <p>The HSE is a fantastic service available to anyone in Ireland. They have specialist treatment available for almost anything you can think of. In particular, they have an addiction service offering a wide vaeriety of different options. Their services are non-judgemental and offer a space to talk about your situation, to explore some options and to consider your needs.</p>
+          </div>
+          <div className='link'>
+            <a href='https://www.hse.ie/eng/services/list/5/addiction/'>You can access their website here</a>
+          </div>
+        </div>
+
+      </div>
   )
 }
 

@@ -220,6 +220,8 @@ iframe{
 }
 
 .servicedescription{
+  padding-left: 2vw;
+  padding-right: 2vw;
   margin-top: 4vh;
   margin-bottom: 4vh;
 }
