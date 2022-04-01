@@ -3,7 +3,7 @@ const router = express.Router();
 var drugModel = require('../Models/drugModel');
 
 router.get('/', (req, res) => {
-  drugModel.find({}, (err, data) => {
+  drugModel.find(req.query, (err, data) => {
     if(err){
       console.log(err);
     }

@@ -44,8 +44,8 @@ const App = () => {
     return(
       <>
         <Navigation showNav={showNavWrap} hideNav={hideNavWrap} showItems={showItems} hideItems={hideItems} showLogo={showLogo} hideLogo={hideLogo}/>
-      <Routes>
         {/* Different displays based on login status */}
+      <Routes>
           {success == 'true' ? (
           <>
             <Route path='/' element={ <Home status={logoanimation} onChange={setlogoAnimation} text1={t1Animation} 

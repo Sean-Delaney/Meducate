@@ -1,7 +1,7 @@
 import React from 'react'
 import '../components/css/about.css'
 import AboutBody from '../components/AboutBody'
-import Navigation from '../components/Navigation'
+import '../components/css/pages.css'
 
 const About = () => {
   return (

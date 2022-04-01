@@ -1,15 +1,22 @@
-import React from 'react'
-import '../components/css/cocaine.css'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import Druglist from '../components/Druglist'
 
 const Cocaine = () => {
+
+  const[substances, setSubstances] = useState([])
+
+  useEffect(()=>{
+    axios.get('http://localhost:3001/drugs', 
+    {params: {
+      name: 'Cocaine'
+    }}).then((res)=>{
+      setSubstances(res.data);
+    })
+  },[])
+
   return (
-    <>
-    <div id='holder'>
-      <div id='main'>
-        <h1>Cocaine</h1>
-      </div>
-    </div>
-    </>
+    <Druglist name={'Cocaine'} url={"https://www.youtube.com/embed/OMMOlj68mnM?autoplay=1"} />
   )
 }
 

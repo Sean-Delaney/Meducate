@@ -1,7 +1,7 @@
 #maincontent{
   margin: none;
   min-height: fit-content;
-  width: 98.85vw;
+  width: 100%;
   background: linear-gradient(180deg, rgb(0, 12, 59), rgb(67, 22, 173));
   background-size: 150%, 150%;
   animation: gradient ease 15s infinite;

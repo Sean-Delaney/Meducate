@@ -2,28 +2,38 @@ import React from 'react'
 
 const AboutBody = () => {
   return (
-    <div>
-      <div>
-      <p>loremReprehenderit nulla aliquip et excepteur nostrud dolore non voluptate non mollit cillum. Ullamco id exercitation pariatur Lorem veniam culpa aliquip minim est laboris. Est adipisicing esse irure dolore mollit aute.
+    <div id='aboutholder'>
+      <div className='container'>
 
-Esse nulla ut qui occaecat occaecat. Aliquip consectetur labore anim ullamco fugiat quis ut. Lorem ullamco et ad quis sit velit voluptate. Ipsum sunt incididunt dolor qui irure voluptate cillum ad. Nulla ea culpa reprehenderit culpa amet. Nostrud minim cupidatat eiusmod nostrud laboris do exercitation ea et laborum nostrud.
+        <section className='one'>
+          <h1 className='abouth1'>What is Meducate ?</h1>
+          <h2>Scroll to find out...</h2>
+        </section>
 
-Dolore nostrud irure consectetur proident culpa adipisicing enim velit eu pariatur ut minim. Aute et et veniam voluptate. Ex adipisicing nostrud Lorem reprehenderit.
+        <section className='two'>
+          <h1 className='abouth1'>Medcuate is a computer science final year project</h1>
+        </section>
 
-Magna amet enim amet nisi esse ut amet. Elit ullamco non esse consectetur sunt anim tempor esse in ullamco voluptate. Fugiat do duis adipisicing cupidatat adipisicing nisi enim consequat nulla cupidatat deserunt labore voluptate quis. Amet exercitation occaecat consequat amet et adipisicing exercitation sunt reprehenderit. Ex aute esse enim cillum voluptate nisi esse.
+      <section className='three'>
+          <h1 className='abouth1'>It is a website designed to combat drug use within college students</h1>
+      </section>
 
-Dolor ad sunt labore eiusmod magna elit proident aute. Excepteur esse commodo eiusmod id laborum tempor occaecat nostrud. Lorem pariatur sit esse dolore irure aliqua cupidatat fugiat.
+      <section className='four'>
+        <h1 className='abouth1'>Why meducate?</h1>
+        <h2 className='abouth2'>Being a college student myself, I noticed that a lot of people around me were trying out illegal drugs and abusing some of the legal ones such as alcohol and tobacco...</h2>
+      </section>
 
-Fugiat est mollit esse quis veniam incididunt mollit labore. Commodo sunt adipisicing excepteur ea aute voluptate culpa ad sunt sunt enim Lorem laboris. Est in nostrud ullamco proident dolore.
+      <section className='five'>
+        <h1 className='abouth1'>So...</h1>
+        <h2 className='abouth2'>I deicded to carry out a survey. Unsurpringly, of the 73 responses, 98.6% had used alcohol, 78.1% tobacco, 71.2% marijuana and 49.3% cocaine, thats not even mentioning the other drugs..</h2>
+      </section>
 
-Adipisicing elit ea amet aute incididunt sit aliqua excepteur reprehenderit. Sit cupidatat minim exercitation amet. Incididunt pariatur ipsum ex amet fugiat eiusmod esse aliqua non. Proident anim proident sunt laboris pariatur aliqua sint aliquip ut. Commodo ex proident mollit culpa. Labore laborum anim minim occaecat enim pariatur sint do enim sint esse exercitation non duis.
+      <section className='six'>
+        <h1 className='abouth1'>It was clear something had to be done</h1>
+        <h2 className='abouth2'>And so Meducate was born, a space for students to learn about different drugs</h2>
+      </section>
 
-Laborum eu ipsum quis deserunt dolor elit enim reprehenderit. Aliqua dolor laboris occaecat pariatur laborum et. Consectetur velit enim sint ut id ea. Et do cillum quis aliqua. Ad et ipsum enim fugiat.
-
-Cillum qui proident elit consectetur in fugiat. Mollit anim aute officia do laborum. Enim adipisicing mollit id nulla dolore esse ullamco laborum.
-
-Ut laboris adipisicing officia reprehenderit. Proident culpa laborum irure ad aliquip. Velit veniam officia laborum ea tempor sit consectetur tempor cupidatat non reprehenderit.</p>
-</div>
+      </div>
     </div>
   )
 }

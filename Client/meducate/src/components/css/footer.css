@@ -6,6 +6,7 @@
   align-items: center;
   animation: fadeout 0.4s forwards;
   height: 5vh;
+  width: 100%;
 }
 
 #footer:hover{

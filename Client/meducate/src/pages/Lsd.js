@@ -1,12 +1,9 @@
 import React from 'react'
+import Druglist from '../components/Druglist'
 
 const Lsd = () => {
   return (
-    <div id='holder'>
-      <div id='main'>
-        <h1>LSD</h1>
-      </div>
-    </div>
+    <Druglist name={'Acid (LSD)'} url={"https://www.youtube.com/embed/wG5JyorwYPo?autoplay=1"} />
   )
 }
 

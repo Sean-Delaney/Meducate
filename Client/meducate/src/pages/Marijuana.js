@@ -1,13 +1,9 @@
 import React from 'react'
-import '../components/css/marijuana.css'
+import Druglist from '../components/Druglist'
 
 const Marijuana = () => {
   return (
-    <div id='holder'>
-      <div id='main'>
-        <h1>Marijuana</h1>
-      </div>
-    </div>
+    <Druglist name={'Marijuana'} url={"https://www.youtube.com/embed/LHJD_GFGkrc?autoplay=1"} />
   )
 }
 

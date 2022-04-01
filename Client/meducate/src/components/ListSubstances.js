@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import './css/info.css'
-import img from '../images/cocaine.png';
 
 const ListSubstances = () => {
 
@@ -27,7 +26,7 @@ const ListSubstances = () => {
             <h3>Click here to see more</h3>
           </div>
           <div className='image'>
-            <img src={img}/>
+            <img/>
           </div>
         </div>
         </Link>

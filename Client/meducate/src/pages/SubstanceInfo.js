@@ -4,8 +4,6 @@ import ListSubstances from '../components/ListSubstances.js';
 
 const SubstanceInfo = () => {
 
-  const hello = <div> This is working </div>
-
   return (
     <ListSubstances />
   )

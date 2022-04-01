@@ -3,16 +3,46 @@ import '../components/css/services.css'
 
 const Services = () => {
   return (
-    <div>
-      Labore cupidatat ipsum deserunt Lorem irure occaecat reprehenderit esse mollit culpa sint sint. Est sit commodo ut aliqua ullamco sit velit consectetur magna. Ad dolor consequat mollit cillum eu exercitation. Eiusmod laboris nisi officia veniam occaecat culpa adipisicing do aliqua excepteur anim excepteur laboris exercitation. Nostrud Lorem elit sint labore.
+    <div id='servicesholder'>
 
-Aliqua consectetur aute nostrud eiusmod cupidatat sunt do. Exercitation eu cillum qui ea elit do pariatur ullamco proident quis ullamco dolor irure id. Commodo cupidatat irure sunt labore pariatur cupidatat laboris amet esse qui sit. Commodo occaecat pariatur Lorem laborum non ipsum tempor esse exercitation. Ex ex pariatur nostrud pariatur elit enim aliqua fugiat esse excepteur eiusmod non.
+      <div id='mapholder'>
+        <h1>Below is a map of some of the rehabilitation services on offer in Ireland</h1>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1D7LOpOkdGTiZcbEOhPYQMEhk3xkERhbn&ehbc=2E312F" width="640" height="480"></iframe>
+      </div>
 
-Mollit laboris dolore ullamco in enim ullamco enim ad duis. Consectetur est cillum Lorem dolore deserunt irure cillum consequat qui commodo laboris minim fugiat pariatur. Excepteur qui nostrud dolore non. Aute elit proident in veniam velit commodo enim aliquip. Deserunt quis proident sunt ea ea aliqua quis excepteur culpa eu pariatur mollit do. Elit sint et dolor sit ut labore et eu officia duis.
+      <div id='servicesinfo'>
+        <h1>While Meducate is all about preventing students from experimenting with drugs , we know that curiosity will get the better of some</h1>
+        <p>That's why we believe that one of the most important messages out there is that <br /> </p>
+        <p id='slogan'>'It's ok not to be ok'</p>
+        <p>If you have experimented with drugs and believe that it may have become a problem for you, please don't be afraid to avail of any of the services listed below.</p>
+      </div>
 
-Ex qui aliquip esse voluptate ea amet mollit magna in. Ad sint eiusmod et anim ea reprehenderit consectetur dolore velit labore. In labore officia enim esse consequat. Esse sit non sunt veniam consectetur veniam cupidatat officia nulla non.
+      <div id='serviceslist'>
+        <div className='service'>
+          <div className='serviceheader'>
+            <h1>Drugs.ie</h1>
+          </div>
+          <div className='servicedescription'>
+            <p>Drugs.ie is a national drugs and alcohol helpline. They provide support, information, guidance and refferal for anyone with a question or concern related to drug and alcohol use and/or HIV and sexual health. The service is non-judgemental and offers space to talk about your situation, to explore some options and to consider your needs. During calls/ emails, staff refer to a database of over 400 services nationwide.</p>
+          </div>
+          <div className='link'>
+            <a href='https://www.drugs.ie/'>You can access their wbsite here</a>
+          </div>
+        </div>
 
-Excepteur ut labore velit ullamco. Nulla ea sit mollit nostrud dolore. Cupidatat tempor non aliqua aute tempor ea id elit cillum sint cupidatat nisi esse consequat.
+        <div className='service'>
+          <div className='serviceheader'>
+            <h1>Cuan Mhuire</h1>
+          </div>
+          <div className='servicedescription'>
+            <p>Cuan Mhuire is a charitable drug, alcohol and gambling rehabilitation organisation in Ireland. Cuan Mhuire offers a comprehensive, structured, abstinence based, residential programme to persons suffering from alcohol, other chemical dependencies and gambling.</p>
+          </div>
+          <div className='link'>
+            <a href='https://cuanmhuire.ie/'>You can access their website here</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }
