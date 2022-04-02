@@ -1,4 +1,3 @@
-import './css/Header.css';
 import img from './icons/logo.png'
 
 //States

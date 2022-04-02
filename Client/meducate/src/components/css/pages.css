@@ -79,6 +79,26 @@ section{
   font-size: 8vh;
 }
 
+@media only screen and (max-width: 768px){
+  .abouth1{
+    font-size: xx-large;
+  }
+
+  .abouth2{
+    font-size: large;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  .abouth1{
+    font-size: xxxx-large;
+  }
+
+  .abouth2{
+    font-size: xx-large;
+  }
+}
+
 
 /* Drugs Info page */
 *{
@@ -204,9 +224,17 @@ iframe{
   width: 40%;
   border-radius: 5px;
   margin-bottom: 5vh;
-  background-color: RGB(0, 74, 173);
+  background-color: RGB(0, 229, 76);
   text-align: center;
   box-shadow: rgb(255, 0, 0) 0px 25px 20px -20px;
+}
+
+.service:nth-child(2){
+  background-color: RGB(0, 255, 171);
+}
+
+.service:nth-child(1){
+  background-color: RGB(1, 238, 255);
 }
 
 .serviceheader{
@@ -232,4 +260,260 @@ iframe{
 
 .service:hover{
   background: rgb(71, 151, 255);
+  padding: .5%;
+  transition: ease-in-out padding .2s;
+}
+
+/* Media query to stack boxes on display size reduction */
+@media only screen and (max-width: 768px){
+  .service{
+    min-width: 80%;
+  }
+
+  iframe{
+    height: 50vh;
+  }
+}
+
+/* Contact page */
+
+#contactholder{
+  width: 100%;
+  height: fit-content;
+  padding-top: 12vh;
+  overflow-y: visible;
+  min-height: 78vh;
+}
+
+#contactformholder{
+  padding: none;
+  text-align: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  height: 90%;
+  overflow-x: visible;
+  margin-bottom: none;
+  align-items: stretch;
+}
+
+#contactleft{
+  width: 46%;
+  padding-bottom: none;
+}
+
+#contactright{
+  padding: none;
+  width: 45%;
+}
+
+.contactformheader{
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 7.5vh;
+}
+
+.contactform{
+  text-align: center;
+  border: 1px solid RGB(98, 183, 223);
+  border-bottom: none;
+}
+
+.contactform label{
+  font-size: 150%;
+}
+
+.contactform input{
+  text-align: center;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid red;
+  border-right: 4px solid red;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  width: 95%;
+  font-size: 150%;
+}
+
+.contactform #textarea{
+  margin-top: 5%;
+  outline: none;
+  resize: none;
+  height: 6vh;
+  text-align: center;
+  background: none;
+  border: none;
+  border-bottom: 2px solid red;
+  border-right: 4px solid red;
+  font-size: 150%;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+}
+
+#contactformholder form{
+  overflow-y: hidden;
+  background-color: RGB(0, 12, 60);
+  box-shadow: rgb(255, 0, 0) 0px 25px 20px -20px;
+  border-radius: 5px;
+}
+
+#contactformholder button{
+  margin-bottom: 2%;
+}
+
+.substanceform h3{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-bottom: 2%;
+  border-bottom: 2px solid RGB(98, 183, 223);
+}
+
+
+@media only screen and (max-width: 768px){
+  #contactright{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  #contactleft{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-bottom: 4vh;
+  }
+
+  #contactformholder{
+    flex-wrap: wrap;
+  }
+
+  #contactholder{
+    height: fit-content;
+  }
+}
+
+/* Header CSS */
+html{
+  height: 100%;
+}
+
+.Header{
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: RGB(0, 12, 60);
+  background-size: 100% 100%;
+  color: white;
+  text-align: center;
+  display:inline-block;
+  height: fit-content;
+  width: 100%;
+  padding-bottom: 3vh;
+}
+
+#logo{
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 66%;
+  width: 66%;
+  border-radius: 300px;
+  animation: rotation 1s infinite alternate;
+  animation-iteration-count: 5;
+}
+
+#logoanimated{
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 66%;
+  width: 38%;
+  border-radius: 300px;
+}
+
+@keyframes rotation{
+  from{
+    height: 25vh;
+    width: 25vh;
+  }
+  to{
+    height: 66vh;
+    width: 66vh;
+  }
+}
+
+#first{
+  color: RGB(0, 74, 173);
+  font-weight: bolder;
+  max-width: 50vw;
+  height: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8vh;
+  margin-bottom: 0vh;
+  padding: none;
+  animation: textin 6s forwards;
+  animation-delay: 5s;
+}
+
+#firstAnimated{
+  color: white;
+  font-weight: bolder;
+  max-width: 50vw;
+  height: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8vh;
+  margin-bottom: 0vh;
+  padding: none;
+}
+
+#second{
+  color: RGB(0, 74, 173);
+  padding: none;
+  max-width: 50vw;
+  max-height: 32vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 6vh;
+  animation: textin 6s forwards;
+  animation-delay: 5s;
+}
+
+#secondAnimated{
+  color: white;
+  padding: none;
+  max-width: 50vw;
+  max-height: 32vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 6vh;
+}
+
+@keyframes textin{
+  0%{
+    color: RGB(0, 74, 173);
+  }
+  100%{
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  #logoanimated{
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35%;
+    width: 70%;
+  }
 }

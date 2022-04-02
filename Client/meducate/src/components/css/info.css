@@ -1,63 +1,53 @@
-.links{
-  text-decoration: none;
-  padding: none;
-  margin: none;
-}
-
 #substancesholder{
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 100vh;
-  width: 95%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 8vh;
+  height: fit-content;
+  width: 90%;
+  padding-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .drugDisplay{
-  flex: 1;
-  padding: none;
-  border: 2px solid #7dd9fa;
-  border-radius: 5px;
-  text-align: center;
+  height: 52vh;
   width: 25vw;
-  min-height: fit-content;
-  font-size: medium;
-  margin-top: 5vh;
+  padding-top: none;
+  background: rgb(0,12,59);
+  border-radius: 5px;
+  margin-bottom: 4vh;
+}
+
+.drugDisplay img{
+  height: fit-content;
+  width: 100%;
+  margin-bottom: none;
 }
 
 .displayHeader{
-  background-color: #7dd9fa;
-  text-decoration: none;
-  height: fit-content;
-  min-height: 9vh;
-  overflow-wrap: break-word;
-}
-
-h1{
-  margin: 0;
+  text-align: center;
+  margin-top: none;
+  height: 8vh;
 }
 
 .displayClick{
-  background-color: #50BFE6;
-  margin: 0;
-  padding: 0;
+  text-align: center;
+  margin-top: none;
+  padding-bottom: 1vh;
 }
 
-h3{
-  margin-top: 0;
+.links{
+  text-decoration: none;
 }
 
-.image{
-  padding: 0;
-  margin-top: 0;
-  height: fit-content;
-}
+@media only screen and (max-width: 768px){
+  .drugDisplay{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
 
-img{
-  margin-top: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
+  #substancesholder{
+    flex-direction: column;
+  }
 }
