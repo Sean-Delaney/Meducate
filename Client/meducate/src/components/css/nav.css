@@ -16,6 +16,22 @@
   justify-content: space-between;
 }
 
+#navbarwrapperanimated{
+  background-color: rgb(0,74,173);
+  opacity: 1;
+  margin: none;
+  padding: none;
+  height: 7.5vh;
+  width: calc(100vw - (100vw - 100%));
+  transition: width 1s;
+  backdrop-filter: blur(3px);
+  position: fixed;
+  overflow: hidden;
+  margin-top: none;
+  display: flex;
+  justify-content: space-between;
+}
+
 @keyframes fadein{
   0%{
     background-color: RGB(0, 74, 173, 0);
@@ -29,6 +45,10 @@
   height: 8vh;
 }
 
+#navbarwrapperanimated:hover{
+  height: 8vh;
+}
+
 #menuicon{
   opacity: 0;
   padding-top: 0.5vh;
@@ -39,6 +59,18 @@
   float: left;
   animation: fadeinicon 5s forwards;
   animation-delay: 5s;
+  padding-left: 0.5vw;
+  margin-bottom: 5vh;
+}
+
+#menuiconanimated{
+  opacity: 1;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  margin: 0;
+  height: 7vh;
+  width: 7vh;
+  float: left;
   padding-left: 0.5vw;
   margin-bottom: 5vh;
 }

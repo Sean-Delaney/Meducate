@@ -4,12 +4,18 @@ import './css/login.css'
 import axios from 'axios'
 const API_URL = 'http://localhost:3001/users'
 
-const LoginForm = ( { setLogin } ) => {
+const LoginForm = ( { setLogin, nav } ) => {
+
+  useEffect(()=>{
+    nav('hidden');
+  },[])
+
   //References
   const userRef = useRef();
   const errRef = useRef();
 
   const handleSubmit = async (e) => {
+    nav('navbarwrapper');
     e.preventDefault();
     let usr = document.getElementById('username').value;
     let pass = document.getElementById('password').value; 

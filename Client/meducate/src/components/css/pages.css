@@ -415,6 +415,8 @@ html{
   display:inline-block;
   height: fit-content;
   width: 100%;
+  height: 100vh;
+  overflow: auto;
   padding-bottom: 3vh;
 }
 
@@ -450,7 +452,7 @@ html{
 }
 
 #first{
-  color: RGB(0, 74, 173);
+  color: RGB(0, 12, 60);
   font-weight: bolder;
   max-width: 50vw;
   height: 10vh;
@@ -461,6 +463,10 @@ html{
   padding: none;
   animation: textin 6s forwards;
   animation-delay: 5s;
+}
+
+#hidden{
+  display: none;
 }
 
 #firstAnimated{
@@ -476,7 +482,7 @@ html{
 }
 
 #second{
-  color: RGB(0, 74, 173);
+  color: RGB(0, 12, 60);
   padding: none;
   max-width: 50vw;
   max-height: 32vh;
@@ -501,7 +507,7 @@ html{
 
 @keyframes textin{
   0%{
-    color: RGB(0, 74, 173);
+    color: RGB(0, 12, 60);
   }
   100%{
     color: white;

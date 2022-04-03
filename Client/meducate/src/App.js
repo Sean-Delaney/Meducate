@@ -22,15 +22,17 @@ import Lsd from './pages/Lsd';
 import Mushrooms from './pages/Mushrooms';
 
 const App = () => {
+
+  const[nav, showNav] = useState('navbarwrapperanimated');
+  const[menuicon, showMenuIcon] = useState('menuiconanimated');
+  var login = localStorage.getItem('loggedIn');
+  console.log(login)
   //State control for the animation prop of the Image on the main homepage and text.
   const[logoanimation, setlogoAnimation] = useState('logo');
   const[t1Animation, setT1Animated] = useState('first');
   const[t2Animation, setT2Animated] = useState('second');
   //State control for not showing menu on login/register page
-  const[showNavWrap, hideNavWrap] = useState('hiddenwrap');
-  const[showItems, hideItems] = useState('hiddenitems');
-  const[showLogo, hideLogo] = useState('hiddenicon');
-  const login = localStorage.getItem('loggedIn');
+  const[showNavWrap, hideNavWrap] = useState(nav);
   const[success, setSuccess] = useState(login);
 
   //Function to be passed to Login and Logout components to allow them to set the login status.
@@ -43,14 +45,14 @@ const App = () => {
     //Main return for all pages, using react router to redirect to different pages.
     return(
       <>
-        <Navigation showNav={showNavWrap} hideNav={hideNavWrap} showItems={showItems} hideItems={hideItems} showLogo={showLogo} hideLogo={hideLogo}/>
+        <Navigation showNav={showNavWrap} state={nav} icon={menuicon}/>
         {/* Different displays based on login status */}
       <Routes>
           {success == 'true' ? (
           <>
             <Route path='/' element={ <Home status={logoanimation} onChange={setlogoAnimation} text1={t1Animation} 
             t1Change={setT1Animated} text2={t2Animation} t2Change={setT2Animated} 
-            shownav={hideNavWrap} showitems={hideItems} showlogo={hideLogo}/> } />
+            shownav={hideNavWrap} state={showNav} icon={showMenuIcon}/> } />
             <Route path='/about' element={ <About /> } />
             <Route path='/contact' element={ <Contact /> } />
             <Route path='/info' element={ <SubstanceInfo /> } />
@@ -68,8 +70,8 @@ const App = () => {
           </>
           ) : (
             <>
-            <Route path='/' element={ <LoginForm setLogin={changeSuccess}/> } />
-            <Route path='/register' element={ <RegisterForm setLogin={changeSuccess}/> } />
+            <Route path='/' element={ <LoginForm setLogin={changeSuccess} nav={showNav}/> } />
+            <Route path='/register' element={ <RegisterForm setLogin={changeSuccess} nav={showNav}/> } />
           </>
           )}
         </Routes>

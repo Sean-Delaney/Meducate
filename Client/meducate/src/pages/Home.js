@@ -3,13 +3,12 @@ import Header from '../components/Header.js'
 import MainBody from '../components/MainBody.js'
 
 //Home Page
-const Home = ({status, onChange, text1, t1Change, text2, t2Change, shownav, showitems, showlogo}) => {
+const Home = ({status, onChange, text1, t1Change, text2, t2Change, state, icon}) => {
 
   useEffect(()=>{
-    shownav('navbarwrapper');
-    showitems('items');
-    showlogo('menuicon');
-  },[])
+    state('navbarwrapper');
+    icon('menuicon');
+  })
 
   //HTML to be rendered
   return(

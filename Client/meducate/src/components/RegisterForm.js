@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect }from 'react'
 import { Link } from 'react-router-dom'
 import '../components/css/register.css'
 import axios from 'axios'
 const API_URL = 'http://localhost:3001/users'
 
-const RegisterForm = ( { setLogin } ) => {
+const RegisterForm = ( { setLogin, nav } ) => {
+
+  useEffect(()=>{
+    nav('hidden');
+  },[])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
