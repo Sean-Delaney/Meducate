@@ -29,9 +29,12 @@ const RegisterForm = ( { setLogin, nav } ) => {
           backToLogin();
         }
         else{
-          alert("Passwords do not match");
+          alert("The username is already taken. Try another one.");
         }
       }) 
+    }
+    else{
+      alert("Passwords do not match")
     }
   }
 

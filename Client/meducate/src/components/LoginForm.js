@@ -19,7 +19,6 @@ const LoginForm = ( { setLogin, nav } ) => {
     e.preventDefault();
     let usr = document.getElementById('username').value;
     let pass = document.getElementById('password').value; 
-    let fetchedUser;
 
     let details = {
       username: usr,
@@ -28,14 +27,11 @@ const LoginForm = ( { setLogin, nav } ) => {
 
     await axios.get(API_URL, {params: details}).then((res) => {
       if(res.data.length == 1){
-        fetchedUser = res.data;
         setLogin('true');
       }
       else{
         setErrormessage();
       }
-    }).then(()=>{
-      console.log(fetchedUser[0].username);
     })
 
     function setErrormessage(){
