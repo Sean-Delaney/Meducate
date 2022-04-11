@@ -26,7 +26,6 @@ const App = () => {
   const[nav, showNav] = useState('navbarwrapperanimated');
   const[menuicon, showMenuIcon] = useState('menuiconanimated');
   var login = localStorage.getItem('loggedIn');
-  console.log(login)
   //State control for the animation prop of the Image on the main homepage and text.
   const[logoanimation, setlogoAnimation] = useState('logo');
   const[t1Animation, setT1Animated] = useState('first');

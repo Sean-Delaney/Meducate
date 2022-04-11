@@ -399,7 +399,7 @@ iframe{
   }
 }
 
-/* Header CSS */
+/* Home Header CSS */
 html{
   height: 100%;
 }
@@ -424,8 +424,6 @@ html{
   padding: 0px;
   margin-left: auto;
   margin-right: auto;
-  height: 66%;
-  width: 66%;
   border-radius: 300px;
   animation: rotation 1s infinite alternate;
   animation-iteration-count: 5;
@@ -435,8 +433,6 @@ html{
   padding: 0px;
   margin-left: auto;
   margin-right: auto;
-  height: 66%;
-  width: 38%;
   border-radius: 300px;
 }
 
@@ -521,5 +517,25 @@ html{
     margin-right: auto;
     height: 35%;
     width: 70%;
+  }
+
+  #logo{
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35%;
+    width: 70%;
+    border-radius: 300px;
+    animation: pulse 1s infinite alternate;
+    animation-iteration-count: 5; 
+  }
+
+  @keyframes pulse{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
   }
 }

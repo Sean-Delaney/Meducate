@@ -2,12 +2,9 @@ const mongoose = require('mongoose');
 
 //Schema for users collection in the database
 const usrSchema = new mongoose.Schema({
-  username: String,
-  password: String,
-  email: String,
-  loggedIn:{type: Boolean, default: false},
-  videosWatched: String,
-  awards: String
+  username: {type: String, required: true},
+  password: {type: String, required: true},
+  email: {type: String, required: true},
 }, {timestamps: true});
 
 //Model for database to be exported

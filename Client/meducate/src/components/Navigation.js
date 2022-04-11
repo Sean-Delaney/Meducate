@@ -10,9 +10,9 @@ const Navigation = ( { showNav, state, icon} ) => {
     <div id={state}>
     <Link to='/'><img src={img} id={icon} alt="Logo"></img></Link>
     <Link to='/about' className='items'>About</Link>
-    <Link to='/contact' className = 'items'>Contact us</Link>
     <Link to='/info' className = 'items'>Drug Info</Link>
     <Link to='/services' className = 'items'>Help services</Link>
+    <Link to='/contact' className = 'items'>Contact us</Link>
     <Link to='/logout' className = 'items'>Logout</Link>
     </div>
     </>

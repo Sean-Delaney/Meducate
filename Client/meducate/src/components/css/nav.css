@@ -122,3 +122,11 @@
 .items:hover{
   color: lightblue;
 }
+
+@media screen and (max-width: 768px) {
+  .items{
+    font-size: x-small;
+    width: 16vw;
+    margin-right: 0vw;
+  }
+}
