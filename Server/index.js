@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const parser = require('body-parser');
 require('dotenv').config({path:'../.env'});
 const cors = require('cors');
+const PORT = process.env.PORT || 3001;
 
 //User parser to parse the request body
 app.use(parser.json())
@@ -27,10 +28,6 @@ db.once('open', ()=>{
   console.log('Database connection successful...');
 });
 
-//Start the server
-app.listen(3001, ()=>{
-  console.log('Server now listening on port 3001');
-})
 
 //Routers
 //Route for getting / creating users
@@ -40,3 +37,12 @@ app.use('/users', userRouter);
 //Route for getting drugs
 const drugRouter = require('./routes/Drugs.js');
 app.use('/drugs', drugRouter);
+
+if(process.env.NODE_ENV == 'production'){
+  app.use(express.static('../Client/meducate/build'))
+}
+
+//Start the server
+app.listen(PORT, ()=>{
+  console.log('Server now listening on port 3001');
+})
