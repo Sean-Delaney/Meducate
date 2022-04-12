@@ -41,6 +41,6 @@ app.use('/drugs', drugRouter);
 app.use('/', express.static('../Client/meducate/build'))
 
 //Start the server
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT || 3001, ()=>{
   console.log('Server now listening on port 3001');
 })
