@@ -2,7 +2,7 @@ import React, { useEffect }from 'react'
 import { Link } from 'react-router-dom'
 import '../components/css/register.css'
 import axios from 'axios'
-const API_URL = 'http://localhost:3001/users'
+const API_URL = 'http://ec2-3-87-93-124.compute-1.amazonaws.com/users'
 const crypt = require('crypto-js')
 
 const RegisterForm = ( { setLogin, nav } ) => {
@@ -93,6 +93,8 @@ const RegisterForm = ( { setLogin, nav } ) => {
 
     //Check all values to ensure user is older than 18 or at least 18 years old
     if(current_year - original_year >= 18){
+      return true;
+    }else{
       if(original_month < current_month){
         return true;
       }
@@ -102,8 +104,6 @@ const RegisterForm = ( { setLogin, nav } ) => {
         }
         return false;
       }
-    }else{
-      return false;
     }
   }
 

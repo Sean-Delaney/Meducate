@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './css/login.css'
 import axios from 'axios'
-const API_URL = 'http://localhost:3001/users'
+const API_URL = 'http://ec2-3-87-93-124.compute-1.amazonaws.com/users'
 const crypt = require('crypto-js')
 
 const LoginForm = ( { setLogin, nav } ) => {
