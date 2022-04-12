@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import './css/login.css'
 import axios from 'axios'
 const API_URL = 'http://localhost:3001/users'
+const crypt = require('crypto-js')
 
 const LoginForm = ( { setLogin, nav } ) => {
 
@@ -22,7 +23,7 @@ const LoginForm = ( { setLogin, nav } ) => {
 
     let details = {
       username: usr,
-      password: pass
+      password: crypt.enc.Base64.stringify(crypt.enc.Utf8.parse(pass))
     }
 
     await axios.get(API_URL, {params: details}).then((res) => {

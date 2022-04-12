@@ -1,10 +1,12 @@
 #loginholder{
   margin: none;
-  height: 90vh;
+  height: fit-content;
+  min-height: 88vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 2vh;
 }
 
 #login{
@@ -72,5 +74,31 @@ button:hover{
 
 #errorholder{
   background-color: red;
+}
+
+@media only screen and (max-width: 1000px){
+  #login{
+    width: 90%;
+  }
+
+  #login form{
+    width: 90%;
+    text-align: center;
+  }
+
+  .box{
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .enter{
+    font-size: x-large;
+  }
+
+  .box{
+    font-size: large;
+    text-align: center;
+  }
 }
 
