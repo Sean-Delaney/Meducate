@@ -38,9 +38,7 @@ app.use('/users', userRouter);
 const drugRouter = require('./routes/Drugs.js');
 app.use('/drugs', drugRouter);
 
-if(process.env.NODE_ENV == 'production'){
-  app.use(express.static('../Client/meducate/build'))
-}
+app.use('/', express.static('../Client/meducate/build'))
 
 //Start the server
 app.listen(PORT, ()=>{

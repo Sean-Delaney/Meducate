@@ -72,7 +72,7 @@ const RegisterForm = ( { setLogin, nav } ) => {
   }
 
   function backToLogin(){
-    window.location.href = 'http://localhost:3000/'
+    window.location.href = '/'
   }
 
   function verifyAge(dob){
