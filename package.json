@@ -2,7 +2,8 @@
   "homepage": " https://sean-delaney.github.io",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "start": "cd Server && npm heroku-postbuild && npm start"
   },
   "dependencies": {
     "-": "^0.0.1",
