@@ -18,7 +18,7 @@ const Passwordchange = () => {
       return;
     }
     //Make sure password is 6 characters minimum
-    else if(!newpwd1.length < 6){
+    else if(!newpwd1.length > 6){
       setError('Password must be 6 or more characters', 4000);
       return;
     }
