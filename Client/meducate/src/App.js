@@ -51,8 +51,7 @@ const App = () => {
           {success == 'true' ? (
           <>
             <Route path='/' element={ <Home status={logoanimation} onChange={setlogoAnimation} text1={t1Animation} 
-            t1Change={setT1Animated} text2={t2Animation} t2Change={setT2Animated} 
-            shownav={hideNavWrap} state={showNav} icon={showMenuIcon}/> } />
+            t1Change={setT1Animated} text2={t2Animation} t2Change={setT2Animated} state={showNav} icon={showMenuIcon}/> } />
             <Route path='/about' element={ <About /> } />
             <Route path='/contact' element={ <Contact /> } />
             <Route path='/info' element={ <SubstanceInfo /> } />
