@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './css/nav.css'
 import img from '../favicon.ico'
 import { Link } from 'react-router-dom';
@@ -13,7 +13,7 @@ const Navigation = ( { showNav, state, icon} ) => {
     <Link to='/info' className = 'items'>Drug Info</Link>
     <Link to='/services' className = 'items'>Help services</Link>
     <Link to='/contact' className = 'items'>Contact us</Link>
-    <Link to='/logout' className = 'items'>Logout</Link>
+    <Link to='/profile' className = 'items'>Profile</Link>
     </div>
     </>
   );

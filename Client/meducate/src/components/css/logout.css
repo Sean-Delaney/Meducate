@@ -9,14 +9,27 @@
 
 #check{
   text-align: center;
+  height: 100%;
+  padding-top: 20vh;
 }
 
-button{
-  margin-left: auto;
-  margin-right: auto;
+.profilebutton{
+  width: 40vw;
+  height: 100%;
+  margin: 5vh;
+}
+
+#profilebuttons{
+  display: flex;
+  justify-content: space-between;
+  height: 40vh;
 }
 
 *{
   padding: none;
   margin: none;
+}
+
+.profilebuttons #logoutbtn{
+  border: 1px solid red;
 }

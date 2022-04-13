@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import './css/login.css'
 import axios from 'axios'
@@ -10,10 +10,6 @@ const LoginForm = ( { setLogin, nav } ) => {
   useEffect(()=>{
     nav('hidden');
   },[])
-
-  //References
-  const userRef = useRef();
-  const errRef = useRef();
 
   const handleSubmit = async (e) => {
     nav('navbarwrapper');

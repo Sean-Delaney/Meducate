@@ -448,7 +448,8 @@ html{
 }
 
 #first{
-  color: RGB(0, 12, 60);
+  color: white;
+  opacity: 0;
   font-weight: bolder;
   max-width: 50vw;
   height: 10vh;
@@ -478,7 +479,8 @@ html{
 }
 
 #second{
-  color: RGB(0, 12, 60);
+  color: white;
+  opacity: 0;
   padding: none;
   max-width: 50vw;
   max-height: 32vh;
@@ -503,10 +505,10 @@ html{
 
 @keyframes textin{
   0%{
-    color: RGB(0, 12, 60);
+    opacity: 0;
   }
   100%{
-    color: white;
+    opacity: 1;
   }
 }
 
@@ -538,4 +540,47 @@ html{
       opacity: 1;
     }
   }
+}
+
+/* Change password page */
+#pwdChangePge{
+  width: 98.85vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+#changeholder{
+  margin-top: 10vh;
+  padding-top: 4vh;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+  height: 75%;
+  border: 3px solid RGB(81, 183, 237);
+  border-radius: 15px;
+  background-color: RGB(0, 14, 63);
+}
+
+#changeholder label{
+  font-size: x-large;
+}
+
+#changeholder input{
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+  width: 85%;
+  height: 4vh;
+  background: none;
+  border: none;
+  border-bottom: 2px solid red;
+  border-right: 2px solid red;
+  outline: none;
+  text-align: center;
+  font-size: large;
+}
+
+#error{
+  background-color: red;
 }

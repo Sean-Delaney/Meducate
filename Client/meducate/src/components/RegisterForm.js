@@ -25,6 +25,16 @@ const RegisterForm = ( { setLogin, nav } ) => {
 
     //Make sure passwords match
     if(pwd1 === pwd2){
+
+      //Make sure password is long enough
+      if(!pwd1.length >= 6){
+        error.innerHTML = `<p>Your password must be at least 6 characters long</p>`;
+        setTimeout(()=>{
+        error.innerHTML = '';
+      }, 4000);
+      return;
+      }
+
       //Store age verification
       var verify = verifyAge(dob);
 

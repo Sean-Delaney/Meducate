@@ -49,4 +49,22 @@ router.post('/', async (req, res) => {
   })
 })
 
+//Route for updating users
+router.put('/', async(req, res)=>{
+  const usr = req.body.params.usr;
+  const pwd = req.body.params.pwd;
+
+  usermodel.updateOne({username: usr},
+    {$set: {password: pwd}}, (err, data) =>{
+      if(err){
+        console.log(err);
+        res.send('failed');
+        res.end();
+      }
+      console.log('User ' + usr + ' password updated.');
+      res.send('success');
+      res.end();
+    })
+})
+
 module.exports = router;

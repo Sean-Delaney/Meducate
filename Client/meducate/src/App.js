@@ -1,5 +1,5 @@
 import './index.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.js';
 import About from './pages/About.js';
@@ -20,6 +20,7 @@ import Ketamine from './pages/Ketamine';
 import Twocb from './pages/Twocb';
 import Lsd from './pages/Lsd';
 import Mushrooms from './pages/Mushrooms';
+import Passwordchange from './pages/Passwordchange';
 
 const App = () => {
 
@@ -56,7 +57,7 @@ const App = () => {
             <Route path='/contact' element={ <Contact /> } />
             <Route path='/info' element={ <SubstanceInfo /> } />
             <Route path='/services' element={ <Services /> } />
-            <Route path='/logout' element={ <Logout setLogin={changeSuccess} /> } />
+            <Route path='/profile' element={ <Logout setLogin={changeSuccess} /> } />
             <Route path='/cocaine' element={ <Cocaine /> } />
             <Route path='/marijuana' element={ <Marijuana /> } />
             <Route path='/alcohol' element={ <Alcohol /> } />
@@ -66,6 +67,7 @@ const App = () => {
             <Route path='/2cb' element={ <Twocb /> } />
             <Route path='/lsd' element={ <Lsd /> } />
             <Route path='/magicmushrooms' element={ <Mushrooms /> } />
+            <Route path='/changepassword' element={ <Passwordchange />} />
           </>
           ) : (
             <>
