@@ -20,6 +20,7 @@ const LoginForm = ( { setLogin, nav } ) => {
     e.preventDefault();
     let usr = document.getElementById('username').value;
     let pass = document.getElementById('password').value; 
+    localStorage.setItem('name', usr);
 
     let details = {
       username: usr,

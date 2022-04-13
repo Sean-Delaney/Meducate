@@ -25,7 +25,7 @@ const AboutBody = () => {
 
       <section className='five'>
         <h1 className='abouth1'>So...</h1>
-        <h2 className='abouth2'>I deicded to carry out a survey. Unsurpringly, of the 73 responses, 98.6% had used alcohol, 78.1% tobacco, 71.2% marijuana and 49.3% cocaine, thats not even mentioning the other drugs..</h2>
+        <h2 className='abouth2'>I deicded to carry out a survey. Unsurprisingly, of the 73 responses, 98.6% had used alcohol, 78.1% tobacco, 71.2% marijuana and 49.3% cocaine, thats not even mentioning the other drugs..</h2>
       </section>
 
       <section className='six'>

@@ -1,13 +1,6 @@
 #maincontent{
-  margin: none;
-  min-height: fit-content;
-  width: 100%;
-  background: RGB(0, 12, 60);
-  background-size: 150%, 150%;
-  animation: gradient ease 15s infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: fit-content;
+  width: fit-content;
 }
 
 @keyframes gradient{
@@ -22,21 +15,35 @@
   }
 }
 
-#title{
-  margin-left: 10vw;
-  margin-right: 15vw;
+#hometitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: white;
+  height: 30vh;
+  width: 30vh;
+  background-color: #7700ff;
+  border: 2px solid aqua;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 #body{
+  background-color: #7700ff;
   color: white;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border:2px solid aqua;
+  border-radius: 15px;
+  padding: 2vw;
 }
 
 #about{
   margin: none;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: none;
   overflow-y: scroll;
   opacity: .4;
