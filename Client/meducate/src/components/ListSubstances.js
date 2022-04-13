@@ -8,7 +8,7 @@ const ListSubstances = ( { drugname, url }) => {
   const[substances, setSubstances] = useState([]);
 
   useEffect(()=>{
-    axios.get('http://localhost:3001/drugs', {params : {
+    axios.get('http://ec2-3-87-93-124.compute-1.amazonaws.com/drugs', {params : {
       name: drugname
     }}).then((res)=>{
       setSubstances(res.data);
